@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+# 📝 Form Template Builder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, intuitive form template builder that allows users to create custom forms with drag-and-drop functionality, real-time preview, and dynamic form generation. Built with React, TypeScript, and Tailwind CSS.
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+### 🏗️ **Template Builder**
+- **Create Templates**: Up to 5 custom form templates
+- **Section Management**: Organize fields into logical sections
+- **5 Field Types**: 
+  - 📝 Label (H1, H2, H3 styling options)
+  - 📄 Text (Multi-line textarea)
+  - 🔢 Number (Numeric input with validation)
+  - ☑️ Boolean (Checkbox input)
+  - 📋 Enum (Dropdown with custom options)
+- **Drag & Drop**: Reorder fields within sections
+- **Real-time Preview**: See your form as you build it
+- **Field Configuration**: Custom labels, placeholders, required validation
+- **Auto-save**: All changes saved to localStorage automatically
 
-### `npm start`
+### 📋 **Form Rendering**
+- **Dynamic Generation**: Forms generated from template schemas
+- **Type Validation**: Field-specific validation rules
+- **Required Field Validation**: Ensure critical data is collected
+- **Form Submission**: Store responses in localStorage
+- **Success Feedback**: Clear confirmation after submission
+- **Responsive Design**: Works on desktop and mobile
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 💾 **Data Management**
+- **localStorage Persistence**: All data saved locally
+- **Template Versioning**: Track creation and update timestamps
+- **Submission Tracking**: View form submission counts
+- **Data Export**: Access data through browser DevTools
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+- **Frontend**: React 19 with TypeScript
+- **State Management**: Context API with custom hooks
+- **Styling**: Tailwind CSS with custom design system
+- **Drag & Drop**: @dnd-kit library
+- **Storage**: Browser localStorage API
+- **Build Tool**: Create React App
+- **Type Safety**: Full TypeScript implementation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📦 Installation & Setup
 
-### `npm run build`
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn package manager
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Quick Start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/pragati-said/form-template-builder.git
+   cd form-template-builder
