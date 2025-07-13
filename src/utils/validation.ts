@@ -27,8 +27,36 @@ export const validateField = (field: Field, value: any): string | null => {
       if (isNaN(numValue)) {
         return `${field.label} must be a valid number`;
       }
-      if (numValue < -999999999 || numValue > 999999999) {
-        return `${field.label} must be between -999,999,999 and 999,999,999`;
+      
+      // Smart validation based on field context
+      const fieldLower = field.label.toLowerCase();
+      
+      if (fieldLower.includes('phone') || fieldLower.includes('contact') || fieldLower.includes('mobile')) {
+        // Phone number validation - accept 7-15 digits
+        const phoneStr = value.toString().replace(/\D/g, ''); // Remove non-digits
+        if (phoneStr.length < 7 || phoneStr.length > 15) {
+          return `${field.label} must be between 7-15 digits`;
+        }
+      } else if (fieldLower.includes('age')) {
+        // Age validation
+        if (numValue < 0 || numValue > 150) {
+          return `${field.label} must be between 0 and 150`;
+        }
+      } else if (fieldLower.includes('year') || fieldLower.includes('experience')) {
+        // Experience/year validation
+        if (numValue < 0 || numValue > 100) {
+          return `${field.label} must be between 0 and 100`;
+        }
+      } else if (fieldLower.includes('id') || fieldLower.includes('employee')) {
+        // ID validation - positive numbers
+        if (numValue <= 0) {
+          return `${field.label} must be a positive number`;
+        }
+      } else {
+        // General number validation - reasonable range
+        if (numValue < -1000000 || numValue > 1000000) {
+          return `${field.label} must be between -1,000,000 and 1,000,000`;
+        }
       }
       break;
 
